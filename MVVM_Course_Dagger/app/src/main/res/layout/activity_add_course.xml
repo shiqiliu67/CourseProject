@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="addCourseInfo"
+            type="com.shiqiliu.mvvm_course_dagger.model.data.CourseBody"/>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:layout_marginTop="20dp"
+            android:id="@+id/edit_text_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{addCourseInfo.course_title}"
+            android:textSize="@dimen/common_size"
+            android:hint="@string/hint_title" />
+
+        <EditText
+            android:id="@+id/edit_text_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{addCourseInfo.course_desc}"
+            android:textSize="@dimen/common_size"
+            android:hint="@string/hint_desc"/>
+
+        <EditText
+            android:id="@+id/edit_text_fee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{addCourseInfo.course_fees}"
+            android:textSize="@dimen/common_size"
+            android:hint="@string/hint_fees"/>
+        <Button
+            android:layout_marginTop="50dp"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_gravity="center"
+            android:text="Submit"
+            android:id="@+id/button_submit"/>
+    </LinearLayout>
+</layout>

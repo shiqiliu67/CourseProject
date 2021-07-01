@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="courseInfo"
+            type="com.shiqiliu.mvvm_course_dagger.model.data.Course"/>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/text_view_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{courseInfo.course_title}"
+            android:textSize="@dimen/title_size"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/text_view_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{courseInfo.course_desc}"
+            android:textSize="@dimen/common_size"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/text_view_fee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{courseInfo.course_fees}"
+            android:textSize="@dimen/common_size"/>
+    </LinearLayout>
+</layout>
